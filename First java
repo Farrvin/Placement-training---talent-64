@@ -1,0 +1,125 @@
+1)Write a program to print whether a number is even or odd, also take input from the user.
+
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if (num % 2 == 0) {
+            System.out.println("Even Number");
+        } else {
+            System.out.println("Odd Number");
+        }
+
+        sc.close();
+    }
+}
+
+2)Take name as input and print a greeting message for that particular name.
+
+import java.util.Scanner;
+
+public class Greeting {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = sc.nextLine();
+
+        System.out.println("Hello, " + name + "! Welcome!");
+
+        sc.close();
+    }
+}
+
+3)Write a program to input principal, time, and rate (P, T, R) from the user and find Simple Interest.
+
+import java.util.Scanner;
+
+public class SimpleInterest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Principal: ");
+        float p = sc.nextFloat();
+
+        System.out.print("Enter Time: ");
+        float t = sc.nextFloat();
+
+        System.out.print("Enter Rate: ");
+        float r = sc.nextFloat();
+
+        float si = (p * t * r) / 100;
+
+        System.out.println("Simple Interest = " + si);
+
+        sc.close();
+    }
+}
+
+4)Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
+
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double b = sc.nextDouble();
+
+        System.out.print("Enter operator (+, -, *, /): ");
+        char op = sc.next().charAt(0);
+
+        if (op == '+') {
+            System.out.println("Result = " + (a + b));
+        } else if (op == '-') {
+            System.out.println("Result = " + (a - b));
+        } else if (op == '*') {
+            System.out.println("Result = " + (a * b));
+        } else if (op == '/') {
+            if (b != 0) {
+                System.out.println("Result = " + (a / b));
+            } else {
+                System.out.println("Cannot divide by zero");
+            }
+        } else {
+            System.out.println("Invalid operator");
+        }
+
+        sc.close();
+    }
+}
+
+5)Take 2 numbers as input and print the largest number.
+
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (a > b) {
+            System.out.println("Largest = " + a);
+        } else if (b > a) {
+            System.out.println("Largest = " + b);
+        } else {
+            System.out.println("Both numbers are equal");
+        }
+
+        sc.close();
+    }
+}
